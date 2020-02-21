@@ -15,6 +15,7 @@ const {width, height} = canvas;
 //create random x and y value for staring point
 let x = Math.floor(Math.random() * width);
 let y = Math.floor(Math.random() * height);
+console.log(x,y);
 
 ctx.lineJoin = 'round';
 ctx.lineCap = 'round';
