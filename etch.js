@@ -1,5 +1,3 @@
-console.log('it works');
-
 // declare elements
 
 const canvas = document.querySelector('#etch-a-sketch');
@@ -15,7 +13,6 @@ const {width, height} = canvas;
 //create random x and y value for staring point
 let x = Math.floor(Math.random() * width);
 let y = Math.floor(Math.random() * height);
-console.log(x,y);
 
 ctx.lineJoin = 'round';
 ctx.lineCap = 'round';
@@ -29,21 +26,22 @@ ctx.moveTo(x, y);
 ctx.lineTo(x, y);
 ctx.stroke();
 
+
 // write a draw function
 function draw({key}) {
-    //increment hue
+    //increment hue 
+
     hue += 5;
     ctx.strokeStyle = `hsl(${hue}, 100%, 50%)`;
-console.log(key);
+   
 // start the path
 ctx.beginPath();
-ctx.moveTo(x, y);
+ctx.moveTo(x,y);
 
 switch(key) {
     case 'ArrowUp':
         y -= MOVE_AMOUNT;
         break;
-        dsds
     case 'ArrowDown':
         y += MOVE_AMOUNT;
         break;
@@ -55,22 +53,21 @@ switch(key) {
         break;
         default:
         break;
-
 }
 
 ctx.lineTo(x,y);
 ctx.stroke();
-}
+} 
 
 // write handler
 function handleKey(e) {
-    
+
     if (e.key.includes('Arrow')) {
         e.preventDefault();
         draw({key: e.key});
-    
     }
 }
+
 
 // shake function
 
@@ -85,3 +82,4 @@ function clearCanvas () {
 // listen for arrow keys
 window.addEventListener('keydown', handleKey);
 shakeButton.addEventListener('click', clearCanvas);
+

@@ -103,6 +103,25 @@ button.newGame {
   left:25%;
 }
 
+button.rainbow {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  font-family: Helvetica, Arial, sans-serif;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color:goldenrod;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+  position: relative;
+  top: 40%;
+  left:17.5%;
+}
+
 .shake:hover {background-color: #3e8e41}
 
 .shake:active {
@@ -110,13 +129,23 @@ button.newGame {
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
-.newGame:hover {background-color: coral}
+
+.newGame:hover {background-color: palevioletred}
 
 .newGame:active {
-  background-color: coral;
+  background-color: palevioletred;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
+
+.rainbow:hover {background-color: coral}
+
+.rainbow:active {
+  background-color: goldenrod;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
 
 :focus {
   outline-color: var(--pink);
